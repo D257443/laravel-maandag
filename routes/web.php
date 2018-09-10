@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// PascalCase / UpperCamelCase
+// lowerCamelCase / camelCase
+// snake_case
+// kebab-case
+
+Route::get('/profile', 'ProfileController@show');
+Route::get('/profiles', 'ProfileController@index');
+
+
