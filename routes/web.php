@@ -23,4 +23,8 @@ Route::get('/', function () {
 Route::get('/profile', 'ProfileController@show');
 Route::get('/profiles', 'ProfileController@index');
 
+Route::get('/games/{id}', 'GameController@show')->name('games.show');
+Route::get('/games', 'GameController@index');
 
+Route::get('/publishers/{id}', 'PublisherController@show')->name('publishers.show');
+Route::get('/publishers', 'PublisherController@index');
