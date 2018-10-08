@@ -28,3 +28,6 @@ Route::get('/games', 'GameController@index');
 
 Route::get('/publishers/{id}', 'PublisherController@show')->name('publishers.show');
 Route::get('/publishers', 'PublisherController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

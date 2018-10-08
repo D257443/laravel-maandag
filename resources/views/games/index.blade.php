@@ -11,7 +11,14 @@
 <h1>Game Overview (Master page)</h1>
 <ul>
     @foreach($games as $game)
-        <li><a href="{{ route('games.show', $game->id) }}">{{$game->title}} {{$game->publisher}}</a></li>
+        <li><a href="{{ route('games.show', $game->id) }}">
+                {{$game->title}} ({{$game->publisher->company_name}}, alle games door deze publisher: 
+                
+                @foreach($game->publisher->games as $publisherGame)
+                    {{$publisherGame->title}}, 
+                @endforeach
+                
+                )</a></li>
     @endforeach
 </ul>
 </body>

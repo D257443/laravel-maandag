@@ -9,9 +9,7 @@ class GameController extends Controller
 {
     // Show all games
     public function index() {
-        $games = Game::where('title', 'LIKE', '%a%')
-            ->orderBy('title', 'DESC')
-            ->get(['id', 'title', 'publisher']);
+        $games = Game::all();
 
         //dd($games); // dump & die
 
